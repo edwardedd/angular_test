@@ -34,11 +34,22 @@ export class CartComponent implements OnInit {
  
  
   cart_val = JSON.parse(localStorage.getItem("mas_arr"));   
-        
-  // addQuantity(vall){
-  //  this.vall +=1; 
-  //  console.log (vall);   
-  // }
+  
+  addQuantity(vall){ 
+   
+   this.items.forEach(function(e){
+     if(e.id === vall){
+       e.quantity = e.quantity +1;
+       
+       console.log (e.quantity);
+       
+     }
+    
+
+   })
+   
+  }
+  
 
   constructor() { }
 
