@@ -6,10 +6,44 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  quantity;
+
+  items = [
+    {
+      id: 1,
+      name: 'article 1',
+      label: 'ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+      price: 25,
+      quantity: 0
+    },
+    {
+      id: 2,
+      name: 'article 2',
+      label: 'ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+      price: 35,
+      quantity: 0
+    },
+    {
+      id: 3,
+      name: 'article 3',
+      label: 'ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+      price: 45,
+      quantity: 0
+    },
+  ];
+ 
+ 
+  cart_val = JSON.parse(localStorage.getItem("mas_arr"));   
+        
+  // addQuantity(vall){
+  //  this.vall +=1; 
+  //  console.log (vall);   
+  // }
 
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

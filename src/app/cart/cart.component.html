@@ -1,1 +1,15 @@
-<p>cart works!</p>
+
+<div class="cart_list">
+    
+  <div class="id"
+  *ngFor="let cart_item of items">
+    
+    <div class="cart_name">
+      id {{cart_val.id}}
+    </div>
+    <span class="quantity">
+      quantity {{cart_val.quantity}}
+    </span>
+    <button class="123" (click)="addQuantity(cart_val.quantity)"></button>
+  </div>
+</div>

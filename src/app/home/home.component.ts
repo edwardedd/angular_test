@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { deflateRaw } from 'zlib';
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
   items = [
     {
       id: 1,
@@ -26,14 +28,23 @@ export class HomeComponent implements OnInit {
       price: 45
     },
   ];
+  
 
-  addToCart() {
-    let qwer = {
-      name: this.items.name,
-      price: 25
-    }
-    localStorage.setItem("qwer", JSON.stringify(qwer)); 
-    console.log(qwer)
+  addToCart(rew) {
+    let wq = rew;
+    // console.log(wq);
+    let mas_arr = {
+      'id': rew,
+      'quantity': +1,
+    };
+
+    this.items.forEach(item_cart => {
+      // console.log(item_cart.id);
+      if (item_cart.id == wq)
+      localStorage.setItem("mas_arr", JSON.stringify(mas_arr));
+    
+    })
+  
 
   }
 
