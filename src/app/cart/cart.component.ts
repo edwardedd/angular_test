@@ -40,8 +40,8 @@ export class CartComponent implements OnInit {
    this.items.forEach(function(e){
      if(e.id === vall){
        e.quantity = e.quantity +1;
-       
-       console.log (e.quantity);
+      //  e.push(e.quantity);
+       console.log (e);
        
      }
     
